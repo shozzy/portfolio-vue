@@ -47,12 +47,22 @@ export default {
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/vuetify',
     '@nuxtjs/axios',
+    '@nuxtjs/proxy',
   ],
   /*
   ** Axios module configuration
   ** See https://axios.nuxtjs.org/options
   */
   axios: {
+    prefix: '/api',
+  },
+  proxy: {
+    '/api': {
+      target: 'http://localhost:3000',
+      pathRewrite: {
+        '^/api': '/'
+      }
+    }
   },
   /*
   ** vuetify module configuration

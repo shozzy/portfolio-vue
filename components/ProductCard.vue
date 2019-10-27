@@ -1,7 +1,7 @@
 <template>
   <div class="productcard pre-wrap">
 
-    <v-card min-width="200px" height="100%" @click.stop="dialog = true">
+    <v-card min-width="300px" height="100%" @click.stop="dialog = true">
       <v-card-title class="font-weight-bold">{{ title }}</v-card-title>
       <v-divider></v-divider>
       <v-card-text>{{ shortenedContent }}</v-card-text>

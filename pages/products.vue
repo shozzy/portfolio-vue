@@ -17,23 +17,9 @@ export default {
   components: {
     ProductCard
   },
-  data() {
-    return {
-        contents: "",
-    };
+  async asyncData({ app }) {
+    const contents = await app.$axios.$get('/api/contents')
+    return { contents }
   },
-  methods: {
-    async getJSON() {
-      try {
-        const response = await this.$axios.$get('/api/contents')
-        this.contents = response
-      } catch (e) {
-        console.error(e)
-      }
-    }
-  },
-  mounted(){
-    this.getJSON()
-  }
 }
 </script>

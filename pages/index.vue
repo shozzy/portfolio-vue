@@ -9,13 +9,9 @@
       sm8
       md6
     >
-      <div class="text-center">
-        <logo />
-        <vuetify-logo />
-      </div>
       <v-card>
         <v-card-title class="headline">
-          Welcome to the Vuetify2.0 + Nuxt.js template
+          shozzy's portfolio 2
         </v-card-title>
         <v-card-text>
           <p>Vuetify is a progressive Material Design component framework for Vue.js. It was designed to empower developers to create amazing applications.</p>

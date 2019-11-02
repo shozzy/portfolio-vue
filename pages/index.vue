@@ -3,31 +3,28 @@
     column
     justify-center
     align-center
+    class="text-center"
   >
     <v-col
       xs12
       sm8
       md6
     >
-      <v-card elevation="0">
-        <v-card-text>
-          <p>ようこそいらっしゃいませ。</p>
-          <p>ここはソフトウェアエンジニアである私"shozzy"のポートフォリオサイトです。</p>
-          <p>どうぞごゆっくりとご覧ください。</p>
-        </v-card-text>
-      </v-card>
+      <p>ようこそいらっしゃいませ。</p>
+      <p><span>ここはソフトウェアエンジニアである</span><span>私"shozzy"のポートフォリオサイトです。</span></p>
+      <p>どうぞごゆっくりとご覧ください。</p>
     </v-col>
   </v-row>
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
-import VuetifyLogo from '~/components/VuetifyLogo.vue'
-
 export default {
-  components: {
-    Logo,
-    VuetifyLogo
-  }
 }
 </script>
+
+<style>
+p span{
+  display: inline-block;
+  white-space: nowrap;
+}
+</style>

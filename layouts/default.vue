@@ -6,7 +6,7 @@
       </v-app-bar-nav-icon>
       <v-toolbar-title v-text="title" />
       <v-spacer />
-      <!-- 幅900px以上くらいじゃないとはみ出す＝画面小さいときはメニュー表示形式変える -->
+      <!-- 幅900px以上くらいじゃないとはみ出す＝widthがsmより小さい(<960px)ときはメニュー表示形式を変える -->
       <v-toolbar-items v-for="item in pages">
         <v-btn text nuxt :to="item.link">{{item.label}}</v-btn>
       </v-toolbar-items>

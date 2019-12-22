@@ -7,7 +7,6 @@
           </v-col>
         </v-row>
       </v-container>
-<!--    <div v-for="item in contents">{{ item }}</div> -->
   </div>
 </template>
 

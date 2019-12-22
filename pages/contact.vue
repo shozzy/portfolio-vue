@@ -18,13 +18,13 @@
           </a>
         </v-avatar>
         <v-avatar size="64">
-          <a href="https://github.com/shozzy" target="_blank" rel="noopener">
-            <img src="/GitHub-Mark-64px.png" class='icon' width='64px' alt="GitHub">
+          <a href="https://qiita.com/shozzy" target="_blank" rel="noopener">
+            <img src="/qiita-favicon.png" class='icon' width='64px' alt="Qiita">
           </a>
         </v-avatar>
         <v-avatar size="64">
-          <a href="https://qiita.com/shozzy" target="_blank" rel="noopener">
-            <img src="/qiita-favicon.png" class='icon' width='64px' alt="Qiita">
+          <a href="https://github.com/shozzy" target="_blank" rel="noopener">
+            <img src="/GitHub-Mark-64px.png" class='icon' width='64px' alt="GitHub">
           </a>
         </v-avatar>
       </v-row>

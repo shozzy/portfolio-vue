@@ -2,7 +2,9 @@
   <v-app>
     <v-app-bar fixed app>
       <v-app-bar-nav-icon>
-        <img src='/shimaenaga_icon_small.png' class='icon' width='30px' alt='shimaenaga_icon'>
+        <nuxt-link to="/">
+          <img src='/shimaenaga_icon_small.png' class='icon' width='30px' alt='shimaenaga_icon'>
+        </nuxt-link>
       </v-app-bar-nav-icon>
       <v-toolbar-title v-text="title" />
       <v-spacer />

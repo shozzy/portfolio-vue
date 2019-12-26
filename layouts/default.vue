@@ -1,11 +1,6 @@
 <template>
   <v-app>
     <v-app-bar fixed app>
-      <v-app-bar-nav-icon>
-        <nuxt-link to="/">
-          <img src='/shimaenaga_icon_small.png' class='icon' width='30px' alt='shimaenaga_icon'>
-        </nuxt-link>
-      </v-app-bar-nav-icon>
       <v-toolbar-title v-text="title" />
       <v-spacer />
       <!-- SKILLS,HISTORYまで含めると、幅900px以上くらいじゃないとはみ出す＝widthがsmより小さい(<960px)ときはメニュー表示形式を変える -->

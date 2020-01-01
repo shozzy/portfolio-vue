@@ -11,14 +11,10 @@
           >
         </p>
         <p>プログラミングやシステムを含めて「ものをつくること」が好き。</p>
-        <p>それを活かして、これからは自社サービスを開発・運用している企業様で仕事ができればと考えています。</p>
+        <p><span>これまでの経験を活かしながら、</span><span>これからは自社サービスを開発・運用している企業様で</span><span>仕事ができればと考えています。</span></p>
       </v-col>
     </v-row>
-    <v-timeline
-      :align-top="alignTop"
-      :dense="dense"
-      :reverse="reverse"
-    >
+    <v-timeline>
       <v-timeline-item
         v-for="item in history"
         :key="item.id"
@@ -44,7 +40,7 @@ export default {
   data () {
     return {
       history: [
-        { when: "現在", title: "個人開発への挑戦", message: "最新の技術に追いつくため、個人開発を始める。家族もおり本業もあるので使える時間は限られている中、少しずつ時間を捻出して勉強と作品づくり、記事執筆に取り組んでいる。", languages: ["ES6", "Vue.js", "Nuxt.js", "Ruby", "Ruby on Rails"] },
+        { when: "2019年", title: "個人開発への挑戦", message: "最新の技術に追いつくため、個人開発を始める。家族もおり本業もあるので使える時間は限られている中、少しずつ時間を捻出して勉強と作品づくり、記事執筆に取り組んでいる。", languages: ["ES6", "Vue.js", "Nuxt.js", "Ruby", "Ruby on Rails"] },
         { when: "2017年", title: "マラソンへの挑戦", message: "体力づくりのため、ランニングを始める。目標があったほうが良いと考え、フルマラソンの大会に申し込む。結果、5時間45分ほどで完走することができた。", languages: ["筋肉は裏切らない"] },
         { when: "現職（ユーザ企業）：異分野への転職", message: "エンドユーザに最も近い場所でシステム開発の最上流から運用まで幅広く経験。そんな中、システムの一部内製化にも取り組む。社内での作業効率改善ツールがメイン。売上データやログデータの収集・集計プログラムなど。最もクリティカルなものでは、小規模取引先様との簡易EDIシステムを構築した。", languages: ["Ruby", "JavaScript"] },
         { when: "1社目（SIer）：社内フレームワークの改善", message: "社内のJavaScriptフレームワークを改善。当時広まりつつあったJSONを活用し、入力データのバリデーションについて実装と設定を分離した。改善前は画面ごとにバリデーションを手作業で構築するという工数ばかりかかる状況だったが、それを設定ベースで実現できるようにして作業工数を大幅に削減し品質も向上できた。", languages: ["JavaScript", "HTML", "CSS"] },
@@ -63,3 +59,13 @@ export default {
   }
 }
 </script>
+
+<style>
+p span{
+  display: inline-block;
+  white-space: nowrap;
+}
+.v-chip {
+  margin: 8px;
+}
+</style>

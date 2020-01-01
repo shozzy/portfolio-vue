@@ -37,3 +37,10 @@ export default {
   }
 }
 </script>
+
+<style>
+@import url('https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c&display=swap&subset=japanese');
+div{
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+</style>

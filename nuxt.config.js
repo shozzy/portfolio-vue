@@ -7,6 +7,9 @@ export default {
     port: 8000,
   },
   mode: 'spa',
+  env: {
+    apiBase: process.env.API_BASE,
+  },
   /*
   ** Headers of the page
   */

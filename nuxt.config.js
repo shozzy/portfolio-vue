@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 import colors from 'vuetify/es5/util/colors'
 
 export default {
@@ -38,7 +40,7 @@ export default {
   ** Nuxt.js dev-modules
   */
   buildModules: [
-    //'@nuxtjs/vuetify',
+    '@nuxtjs/dotenv',
   ],
   /*
   ** Nuxt.js modules
@@ -59,7 +61,7 @@ export default {
   },
   proxy: {
     '/api': {
-      target: 'http://localhost:3000',
+      target: process.env.API_BASE,
       pathRewrite: {
         '^/api': '/'
       }

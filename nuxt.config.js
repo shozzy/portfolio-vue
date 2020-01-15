@@ -4,7 +4,7 @@ export default {
   server: {
     port: 8000,
   },
-  mode: 'universal',
+  mode: 'spa',
   /*
   ** Headers of the page
   */
@@ -38,7 +38,7 @@ export default {
   ** Nuxt.js dev-modules
   */
   buildModules: [
-    '@nuxtjs/vuetify',
+    //'@nuxtjs/vuetify',
   ],
   /*
   ** Nuxt.js modules
@@ -48,6 +48,7 @@ export default {
     '@nuxtjs/vuetify',
     '@nuxtjs/axios',
     '@nuxtjs/proxy',
+    '@nuxtjs/pwa',
   ],
   /*
   ** Axios module configuration

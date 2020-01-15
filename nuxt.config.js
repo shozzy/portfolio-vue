@@ -1,7 +1,10 @@
 import colors from 'vuetify/es5/util/colors'
 
 export default {
-  mode: 'universal',
+  server: {
+    port: 8000,
+  },
+  mode: 'spa',
   /*
   ** Headers of the page
   */
@@ -35,7 +38,7 @@ export default {
   ** Nuxt.js dev-modules
   */
   buildModules: [
-    '@nuxtjs/vuetify',
+    //'@nuxtjs/vuetify',
   ],
   /*
   ** Nuxt.js modules
@@ -44,12 +47,23 @@ export default {
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/vuetify',
     '@nuxtjs/axios',
+    '@nuxtjs/proxy',
+    '@nuxtjs/pwa',
   ],
   /*
   ** Axios module configuration
   ** See https://axios.nuxtjs.org/options
   */
   axios: {
+    prefix: '/api',
+  },
+  proxy: {
+    '/api': {
+      target: 'http://localhost:3000',
+      pathRewrite: {
+        '^/api': '/'
+      }
+    }
   },
   /*
   ** vuetify module configuration
@@ -58,7 +72,7 @@ export default {
   vuetify: {
     customVariables: ['~/assets/variables.scss'],
     theme: {
-      dark: true,
+      dark: false,
       themes: {
         dark: {
           primary: colors.blue.darken2,

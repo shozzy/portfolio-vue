@@ -64,7 +64,7 @@ export default {
   },
   proxy: {
     '/api': {
-      target: process.env.API_BASE,
+      target: 'https://shozzy-portfolio-rails.herokuapp.com',
       pathRewrite: {
         '^/api': '/'
       }

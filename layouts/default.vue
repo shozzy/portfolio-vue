@@ -30,7 +30,6 @@ export default {
         { label: "Profile" , link: "/profile" },
         { label: "Products", link: "/products"},
 //        { label: "Skills"  , link: "/skills"  },
-//        { label: "History" , link: "/history" },
         { label: "Contact" , link: "/contact" },
       ],
     }

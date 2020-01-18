@@ -6,7 +6,7 @@ export default {
   },
   mode: 'spa',
   env: {
-    apiBase: process.env.API_BASE,
+    API_BASE: process.env.API_BASE,
   },
   /*
   ** Headers of the page

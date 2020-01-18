@@ -4,7 +4,7 @@
       <v-toolbar-title v-text="title" />
       <v-spacer />
       <!-- SKILLS,HISTORYまで含めると、幅900px以上くらいじゃないとはみ出す＝widthがsmより小さい(<960px)ときはメニュー表示形式を変える -->
-      <v-toolbar-items v-for="item in pages">
+      <v-toolbar-items v-for="item in pages" :key="item.id">
         <v-btn text nuxt :to="item.link">{{item.label}}</v-btn>
       </v-toolbar-items>
 

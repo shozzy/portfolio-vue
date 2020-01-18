@@ -1,5 +1,3 @@
-require('dotenv').config()
-
 import colors from 'vuetify/es5/util/colors'
 
 export default {
@@ -7,6 +5,9 @@ export default {
     port: 8000,
   },
   mode: 'spa',
+  env: {
+    apiBase: process.env.API_BASE,
+  },
   /*
   ** Headers of the page
   */
@@ -49,7 +50,7 @@ export default {
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/vuetify',
     '@nuxtjs/axios',
-    '@nuxtjs/proxy',
+//    '@nuxtjs/proxy',
     '@nuxtjs/pwa',
   ],
   /*
@@ -57,16 +58,17 @@ export default {
   ** See https://axios.nuxtjs.org/options
   */
   axios: {
-    prefix: '/api',
+//    prefix: '/api',
   },
-  proxy: {
+/*  proxy: {
     '/api': {
-      target: process.env.API_BASE,
+      target: 'https://shozzy-portfolio-rails.herokuapp.com',
       pathRewrite: {
         '^/api': '/'
       }
     }
   },
+*/
   /*
   ** vuetify module configuration
   ** https://github.com/nuxt-community/vuetify-module

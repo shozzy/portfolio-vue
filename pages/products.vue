@@ -17,7 +17,8 @@ export default {
     ProductCard
   },
   async asyncData({ app }) {
-    const contents = await app.$axios.$get('/api/contents')
+    console.log("env:"+process.env.API_BASE)
+    const contents = await app.$axios.$get(process.env.API_BASE+'/api/contents')
     return { contents }
   },
 }

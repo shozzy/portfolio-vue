@@ -2,8 +2,8 @@
   <div>
       <v-container fluid>
         <v-row row wrap>
-          <v-col v-for="item in contents" v-bind:key="item.id" xs12 sm6 md4>
-            <ProductCard v-bind:title="item.title" v-bind:content="item.detail"/>
+          <v-col v-for="item in contents" :key="item.id" xs12 sm6 md4>
+            <ProductCard :title="item.title" :content="item.detail" :tags="item.tags" />
           </v-col>
         </v-row>
       </v-container>

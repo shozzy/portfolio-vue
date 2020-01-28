@@ -1,12 +1,16 @@
 <template>
   <div class="productcard pre-wrap">
 
-    <v-card min-width="300px" height="100%" @click.stop="dialog = true">
+    <v-card min-width="300px" height="90%" @click.stop="dialog = true">
       <v-card-title class="font-weight-bold">{{ title }}</v-card-title>
       <v-divider></v-divider>
       <v-card-text>{{ shortenedContent }}</v-card-text>
+      <v-card-actions>
+        <template v-for="tag in tags">
+          <v-chip small outlined>{{tag.name}}</v-chip>
+        </template>
+      </v-card-actions>
     </v-card>
-
     <v-dialog v-model="dialog" scrollable max-width="600px">
       <v-card>
         <v-card-title class="font-weight-bold">{{ title }}</v-card-title>
@@ -14,6 +18,9 @@
         <v-card-text height="300px" class="pre-wrap">{{ content }}</v-card-text>
         <v-divider></v-divider>
         <v-card-actions>
+          <template v-for="tag in tags">
+            <v-chip small outlined>{{tag.name}}</v-chip>
+          </template>
           <v-spacer></v-spacer>
           <v-btn color="primary" text small @click="dialog = false">CLOSE</v-btn>
         </v-card-actions>
@@ -26,8 +33,10 @@
 export default {
   name: 'ProductCard',
   props: {
+    category: String,
     title: String,
-    content: String
+    content: String,
+    tags: Array,
   },
   data(){
     return {

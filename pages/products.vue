@@ -18,7 +18,7 @@ export default {
   },
   async asyncData({ app }) {
     console.log("env:"+process.env.API_BASE)
-    const contents = await app.$axios.$get(process.env.API_BASE+'/api/contents')
+    const contents = await app.$axios.$get(process.env.API_BASE+'/api/contents?category=products')
     return { contents }
   },
 }

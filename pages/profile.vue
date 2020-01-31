@@ -2,16 +2,8 @@
   <div>
     <v-row>
       <v-col class="text-center">
-        <p>ハンドルネーム：shozzy
-          <img
-            src="/shimaenaga_icon_square.png"
-            alt="my 'shimaenaga' icon"
-            height="32px"
-            width="32px"
-          >
-        </p>
-        <p>プログラミングやシステムを含めて「ものをつくること」が好き。</p>
-        <p><span>これまでの経験を活かしながら、</span><span>これからは自社サービスを開発・運用している企業様で</span><span>仕事ができればと考えています。</span></p>
+        <p>{{profile[0].title}}</p>
+        <p>{{profile[0].detail}}</p>
       </v-col>
     </v-row>
     <v-timeline>
@@ -24,10 +16,10 @@
         <v-card class="elevation-2">
           <v-card-title class="headline">{{item.title}}</v-card-title>
           <v-card-text>
-            {{item.message}}
+            {{item.detail}}
           </v-card-text>
-          <template v-for="language in item.languages">
-            <v-chip small outlined>{{language}}</v-chip>
+          <template v-for="tag in item.tags">
+            <v-chip small outlined>{{tag.name}}</v-chip>
           </template>
         </v-card>
       </v-timeline-item>
@@ -37,6 +29,12 @@
 
 <script>
 export default {
+  async asyncData({ app }) {
+    console.log("env:"+process.env.API_BASE)
+    const profile = await app.$axios.$get(process.env.API_BASE+'/api/contents?category=profile')
+    const history = await app.$axios.$get(process.env.API_BASE+'/api/contents?category=history')
+    return { profile, history }
+  },
   data () {
     return {
       history: [

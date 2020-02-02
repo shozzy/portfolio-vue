@@ -15,7 +15,7 @@
       </v-container>
     </v-content>
     <v-footer app>
-      <span>&copy; 2019 shozzy</span>
+      <span>&copy; 2019-2020 shozzy</span>
     </v-footer>
   </v-app>
 </template>

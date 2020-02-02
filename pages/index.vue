@@ -10,17 +10,18 @@
       sm8
       md6
     >
-      <p>ようこそいらっしゃいませ。</p>
-      <p><span>ここはソフトウェアエンジニアである</span><span>私こと"shozzy"のポートフォリオサイトです。</span></p>
-      <p>どうぞごゆっくりとご覧ください。</p>
-
-
+      <p>{{top[0].detail}}</p>
     </v-col>
   </v-row>
 </template>
 
 <script>
 export default {
+  async asyncData({ app }) {
+    console.log("env:"+process.env.API_BASE)
+    const top = await app.$axios.$get(process.env.API_BASE+'/api/contents?category=top')
+    return { top }
+  },
 }
 </script>
 

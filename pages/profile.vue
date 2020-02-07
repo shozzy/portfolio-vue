@@ -2,14 +2,16 @@
   <div>
     <v-row>
       <v-col class="text-center">
-        <p>{{profile[0].title}}</p>
-        <p>{{profile[0].detail}}</p>
+        <template
+          v-for="item in sortedProfile"
+        >
+          <p>{{item.detail}}</p>
+        </template>
       </v-col>
     </v-row>
     <v-timeline>
       <v-timeline-item
-        v-for="item in history"
-        :key="item.id"
+        v-for="item in sortedHistory"
       >
         <template v-slot:icon />
         <span slot="opposite">{{item.when}}</span>
@@ -34,6 +36,18 @@ export default {
     const profile = await app.$axios.$get(process.env.API_BASE+'/api/contents?category=profile')
     const history = await app.$axios.$get(process.env.API_BASE+'/api/contents?category=history')
     return { profile, history }
+  },
+  computed: {
+    sortedProfile(){
+      return this.profile.sort((a, b) => {
+        return a.sequence - b.sequence
+      });
+    },
+    sortedHistory(){
+      return this.history.sort((a, b) => {
+        return a.sequence - b.sequence
+      });
+    },
   },
 }
 </script>

@@ -81,7 +81,7 @@ export default {
       params.append('company', this.company)
       params.append('message', this.message)
 
-      const response = await this.$axios.$post('/', params)
+      const response = await this.$axios.$post('https://portfolio-vue.netlify.com/', params)
       console.log(response)
     },
   },

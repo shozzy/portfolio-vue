@@ -70,10 +70,13 @@ export default {
       message: "",
     }
   },
+  mounted() {
+    console.log("location="+window.location.host)
+    console.log('axios.baseURL='+this.$axios.defaults.baseURL) 
+  },
   methods: {
     async submit() {
       console.log('submit')
-      console.log('baseURL='+this.$axios.defaults.baseURL) 
       const params = new FormData()
       //以下、ダミーフォームの各フォーム要素のnameと合わせる
       params.append('form-name', 'contact')
@@ -82,7 +85,7 @@ export default {
       params.append('company', this.company)
       params.append('message', this.message)
 
-      const response = await this.$axios.$post('https://portfolio-vue.netlify.com/', params)
+      const response = await this.$axios.$post(window.location.host, params)
       console.log(response)
     },
   },

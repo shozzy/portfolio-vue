@@ -62,6 +62,29 @@
 
 <script>
 export default {
+  data() {
+    return {
+      name: "",
+      email: "",
+      company: "",
+      message: "",
+    }
+  },
+  methods: {
+    async submit() {
+      console.log('submit')
+      const params = new FormData()
+      //以下、ダミーフォームの各フォーム要素のnameと合わせる
+      params.append('form-name', 'contact')
+      params.append('name', this.name)
+      params.append('email', this.email)
+      params.append('company', this.company)
+      params.append('message', this.message)
+
+      const response = await this.$axios.$post('/', params)
+      console.log(response)
+    },
+  },
 }
 </script>
 

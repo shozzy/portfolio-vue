@@ -71,6 +71,9 @@ export default {
     }
   },
   mounted() {
+    console.log("location.protocol="+window.location.protocol)
+    console.log("location.host    ="+window.location.host)
+    console.log("location.origin  ="+window.location.origin)
     console.log("location="+window.location.host)
     console.log('axios.baseURL='+this.$axios.defaults.baseURL) 
   },
@@ -85,7 +88,7 @@ export default {
       params.append('company', this.company)
       params.append('message', this.message)
 
-      const response = await this.$axios.$post(window.location.host, params)
+      const response = await this.$axios.$post(window.location.origin, params)
       console.log(response)
     },
   },

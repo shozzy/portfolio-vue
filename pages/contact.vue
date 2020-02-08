@@ -73,6 +73,7 @@ export default {
   methods: {
     async submit() {
       console.log('submit')
+      console.log('baseURL='+this.$axios.defaults.baseURL) 
       const params = new FormData()
       //以下、ダミーフォームの各フォーム要素のnameと合わせる
       params.append('form-name', 'contact')

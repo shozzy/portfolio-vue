@@ -53,6 +53,11 @@
           label="お問い合わせ内容"
           required
         />
+        <v-text-field
+          v-model="botfield"
+          label="人間は入力しないでください"
+          v-show="false"
+        />
         <v-btn color="primary" @click="submit">送信</v-btn>
       </v-form>
       </p>
@@ -68,18 +73,17 @@ export default {
       email: "",
       company: "",
       message: "",
+      botfield: "",
     }
   },
   mounted() {
     console.log("location.protocol="+window.location.protocol)
     console.log("location.host    ="+window.location.host)
     console.log("location.origin  ="+window.location.origin)
-    console.log("location="+window.location.host)
     console.log('axios.baseURL='+this.$axios.defaults.baseURL) 
   },
   methods: {
     async submit() {
-      console.log('submit')
       const params = new FormData()
       //以下、ダミーフォームの各フォーム要素のnameと合わせる
       params.append('form-name', 'contact')
@@ -87,6 +91,7 @@ export default {
       params.append('email', this.email)
       params.append('company', this.company)
       params.append('message', this.message)
+      params.append('bot-field', this.botfield)
 
       const response = await this.$axios.$post(window.location.origin, params)
       console.log(response)

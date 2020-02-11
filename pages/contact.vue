@@ -56,7 +56,7 @@
         <v-text-field
           v-model="botfield"
           label="人間は入力しないでください"
-          v-show="true"
+          v-show="false"
         />
         <v-btn color="primary" @click="submit">送信</v-btn>
       </v-form>

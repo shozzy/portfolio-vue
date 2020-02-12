@@ -11,27 +11,22 @@
     >
     <!-- 単なるカードじゃなくて、各サービスのアイコンを配置しよう -->
     <!-- 広い画面では横ならび、狭い画面では縦並びになるように調整 -->
-      <p>ご連絡はTwitterのDMか、下記お問い合わせフォームからお願いいたします。</p>
+      <p>各種リソースへのリンク</p>
       <p>
         <v-btn href="https://twitter.com/shozzy" target="_blank" rel="noopener" color="white">
-          <v-avatar size="32" class="mr-2">
-              <img src="/Twitter_Social_Icon_Circle_Color.png" class='icon' width='32px' alt="Twitter">
+          <v-avatar size="32">
+              <img src="/Twitter_Logo_Blue.png" class='icon' width='32px' alt="Twitter">
           </v-avatar>
-          Twitter
+          @shozzy
         </v-btn>
         <v-btn href="https://qiita.com/shozzy" target="_blank" rel="noopener" color="white">
-          <v-avatar size="32" class="mr-2">
-              <img src="/qiita-favicon.png" class='icon' width='32px' alt="Qiita">
-          </v-avatar>
-          Qiita
+          <img src="/Qiita_logo.png" class="icon" alt="Qiita">
         </v-btn>
         <v-btn href="https://github.com/shozzy" target="_blank" rel="noopener" color="white">
-          <v-avatar size="32" class="mr-2">
-              <img src="/GitHub-Mark-64px.png" class='icon' width='32px' alt="GitHub">
-          </v-avatar>
-          GitHub
+          <img src="/GitHub_Logo.png" class="icon" alt="GitHub">
         </v-btn>
       </p>
+      <p>ご連絡はTwitterのDMか、下記お問いあわせフォームからお願いいたします。</p>
       <v-card>
         <v-card-title>お問いあわせフォーム</v-card-title>
         <v-card-text>
@@ -60,6 +55,7 @@
               label="お問い合わせ内容（必須）"
               required
               :rules="[varidations.required]"
+              rows="8"
             />
             <v-text-field
               v-model="botfield"
@@ -143,7 +139,6 @@ export default {
 }
 img.icon {
   vertical-align: bottom;
-  width: 32px;
   height: 32px;
 }
 .v-btn {

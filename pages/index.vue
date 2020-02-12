@@ -1,20 +1,33 @@
 <template>
+
   <v-row
-    column
-    justify-center
-    align-center
+    justify="space-around"
+    align="center"
     class="text-center"
   >
     <v-col
       xs12
       sm8
       md6
+      class="pa-0"
     >
-      <template
-        v-for="item in sortedTop"
-      >
-        <p>{{item.detail}}</p>
-      </template>
+      <v-img src="/sun_and_bluesky.jpg"/>
+    </v-col>
+    <v-col
+      xs12
+      sm8
+      md6
+      class="pl-0 pr-0"
+    >
+      <v-card>
+        <v-card-text>
+          <template
+            v-for="item in sortedTop"
+          >
+            <p>{{item.detail}}</p>
+          </template>
+        </v-card-text>
+      </v-card>
     </v-col>
   </v-row>
 </template>

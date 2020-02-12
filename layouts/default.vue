@@ -39,7 +39,13 @@ export default {
 
 <style>
 @import url('https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c&display=swap&subset=japanese');
-div{
+div {
   font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+div.container {
+  background-color: #D7CCC8;
+}
+div.v-content__wrap {
+  background-color: #D7CCC8;
 }
 </style>

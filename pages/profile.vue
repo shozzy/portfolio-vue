@@ -2,11 +2,15 @@
   <div>
     <v-row>
       <v-col class="text-center">
-        <template
-          v-for="item in sortedProfile"
-        >
-          <p>{{item.detail}}</p>
-        </template>
+        <v-card>
+          <v-card-text>
+            <template
+              v-for="item in sortedProfile"
+            >
+              <p>{{item.detail}}</p>
+            </template>
+          </v-card-text>
+        </v-card>  
       </v-col>
     </v-row>
     <v-timeline>

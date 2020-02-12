@@ -94,7 +94,11 @@ export default {
       params.append('bot-field', this.botfield)
       console.log('params='+params)
       const response = await this.$axios.$post(window.location.origin, params)
-      console.log(response)
+      console.log('response.data='+response.data)
+      console.log('response.status='+response.status)
+      console.log('response.statusText='+response.statusText)
+      console.log('response.headers='+response.headers)
+      console.log('response.config='+response.config)
     },
   },
 }

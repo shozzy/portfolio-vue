@@ -92,7 +92,7 @@ export default {
       params.append('company', this.company)
       params.append('message', this.message)
       params.append('bot-field', this.botfield)
-      const response = await this.$axios.$post(window.location.origin, params)
+      const response = await this.$axios.post(window.location.origin, params)
         .catch(err => {
           console.log('error.response='+err.response)
         })

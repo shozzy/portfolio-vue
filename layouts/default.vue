@@ -28,8 +28,8 @@ export default {
       pages: [
         { label: "Top"     , link: "/"        },
         { label: "Profile" , link: "/profile" },
+        { label: "History" , link: "/history"  },
         { label: "Products", link: "/products"},
-//        { label: "Skills"  , link: "/skills"  },
         { label: "Contact" , link: "/contact" },
       ],
     }

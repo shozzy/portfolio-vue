@@ -11,7 +11,7 @@
       md6
       class="pa-0"
     >
-      <v-img src="/sun_and_bluesky.jpg"/>
+      <v-img :src="image_src"/>
     </v-col>
     <v-col
       xs12
@@ -38,6 +38,11 @@ export default {
     console.log("env:"+process.env.API_BASE)
     const top = await app.$axios.$get(process.env.API_BASE+'/api/contents?category=top')
     return { top }
+  },
+  data() {
+    return {
+      image_src: require("~/assets/sun_and_bluesky.jpg"),
+    }
   },
   computed: {
     sortedTop(){

@@ -15,15 +15,15 @@
       <p>
         <v-btn href="https://twitter.com/shozzy" target="_blank" rel="noopener" color="white">
           <v-avatar size="32">
-              <img src="/Twitter_Logo_Blue.png" class='icon' width='32px' alt="Twitter">
+              <img src="~/assets/Twitter_Logo_Blue.png" class='icon' width='32px' alt="Twitter">
           </v-avatar>
           @shozzy
         </v-btn>
         <v-btn href="https://qiita.com/shozzy" target="_blank" rel="noopener" color="white">
-          <img src="/Qiita_logo.png" class="icon" alt="Qiita">
+          <img src="~/assets/Qiita_logo.png" class="icon" alt="Qiita">
         </v-btn>
         <v-btn href="https://github.com/shozzy" target="_blank" rel="noopener" color="white">
-          <img src="/GitHub_Logo.png" class="icon" alt="GitHub">
+          <img src="~/assets/GitHub_Logo.png" class="icon" alt="GitHub">
         </v-btn>
       </p>
       <p>ご連絡はTwitterのDMか、下記お問いあわせフォームからお願いいたします。</p>

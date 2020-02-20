@@ -4,9 +4,31 @@
       <v-toolbar-title v-text="title" />
       <v-spacer />
       <!-- SKILLS,HISTORYまで含めると、幅900px以上くらいじゃないとはみ出す＝widthがsmより小さい(<960px)ときはメニュー表示形式を変える -->
-      <v-toolbar-items v-for="item in pages" :key="item.id">
+      <v-toolbar-items
+        v-for="item in pages"
+        :key="item.id"
+        v-if="$vuetify.breakpoint.mdAndUp"
+      >
         <v-btn text nuxt :to="item.link">{{item.label}}</v-btn>
       </v-toolbar-items>
+      <v-menu
+        offset-y
+        class="ma-0 pa-0"
+        v-if="$vuetify.breakpoint.smAndDown"
+      >
+        <template v-slot:activator="{ on }">
+          <v-app-bar-nav-icon v-on="on" class="ma-0 pa-0" aria-label="show menu">
+          </v-app-bar-nav-icon >
+        </template>
+        <v-list>
+          <v-list-item
+            v-for="item in pages"
+            :key="item.id"
+          >
+            <v-btn text nuxt :to="item.link">{{item.label}}</v-btn>
+          </v-list-item>
+        </v-list>
+      </v-menu>
 
     </v-app-bar>
     <v-content>

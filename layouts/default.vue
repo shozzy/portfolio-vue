@@ -1,7 +1,9 @@
 <template>
   <v-app>
     <v-app-bar fixed app>
-      <v-toolbar-title v-text="title" />
+      <router-link tag="div" to="/" active-class="router-link-active">
+        <v-toolbar-title v-text="title" />
+      </router-link>
       <v-spacer />
       <!-- SKILLS,HISTORYまで含めると、幅900px以上くらいじゃないとはみ出す＝widthがsmより小さい(<960px)ときはメニュー表示形式を変える -->
       <v-toolbar-items
@@ -69,5 +71,8 @@ div.container {
 }
 div.v-content__wrap {
   background-color: #D7CCC8;
+}
+div.router-link-active {
+  cursor : pointer;
 }
 </style>

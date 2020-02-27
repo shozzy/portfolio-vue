@@ -11,7 +11,10 @@
       md6
       class="pa-0"
     >
-      <v-img :src="image_src"/>
+      <v-img
+        :src="image_src"
+        :lazy-src="lazy_src"
+      />
     </v-col>
     <v-col
       xs12
@@ -42,6 +45,7 @@ export default {
   data() {
     return {
       image_src: require("~/assets/sun_and_bluesky.jpg"),
+      lazy_src:  require("~/assets/sun_and_bluesky_light.jpg"),
     }
   },
   computed: {

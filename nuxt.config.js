@@ -52,6 +52,9 @@ export default {
     '@nuxtjs/axios',
 //    '@nuxtjs/proxy',
     '@nuxtjs/pwa',
+    ['@nuxtjs/google-analytics', {
+      id: 'UA-683769-5'
+    }]
   ],
   /*
   ** Axios module configuration

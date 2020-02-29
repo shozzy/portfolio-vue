@@ -14,6 +14,8 @@
       <v-img
         :src="image_src"
         :lazy-src="lazy_src"
+        :width="image_width"
+        :height="image_height"
       />
     </v-col>
     <v-col
@@ -46,6 +48,7 @@ export default {
     return {
       image_src: require("~/assets/sun_and_bluesky.jpg"),
       lazy_src:  require("~/assets/sun_and_bluesky_light.jpg"),
+
     }
   },
   computed: {

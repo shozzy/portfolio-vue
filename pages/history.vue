@@ -5,15 +5,29 @@
         <p>これまでの経験・経歴を時系列でまとめました。</p>
       </v-col>
     </v-row>
-    <v-timeline>
+    <v-timeline
+      :dense="$vuetify.breakpoint.smAndDown"
+    >
       <v-timeline-item
         v-for="item in sortedHistory"
         color="brown"
         fill-dot
         small
+        :right="$vuetify.breakpoint.smAndDown"
       >
         <template v-slot:icon />
-        <span slot="opposite">{{item.when}}</span>
+        <span
+          slot="opposite"
+          v-if="$vuetify.breakpoint.mdAndUp"
+        >
+          {{item.when}}
+        </span>
+        <span
+          slot="default"
+          v-if="$vuetify.breakpoint.smAndDown"
+        >
+          {{item.when}}
+        </span>
         <v-card class="elevation-2">
           <v-card-title class="headline">{{item.title}}</v-card-title>
           <v-card-text>

@@ -30,9 +30,7 @@
         </span>
         <v-card class="elevation-2">
           <v-card-title class="headline">{{item.title}}</v-card-title>
-          <v-card-text class="pre-wrap">
-            {{item.detail}}
-          </v-card-text>
+          <v-card-text class="pre-wrap">{{item.detail}}</v-card-text>
           <template v-for="tag in item.tags">
             <v-chip small outlined>{{tag.name}}</v-chip>
           </template>
